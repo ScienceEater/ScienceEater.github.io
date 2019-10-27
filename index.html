@@ -1,17 +1,164 @@
+
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>
+            Algorithm for Samsung SW certificate A
+        </title>
+        <style>
+            p#header{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                margin-top:30px;
+                margin-bottom: 20px;
+            }
+            p#project_name a{
+                font: 30px arial, sans-serif;
+                color: rgb(102, 102, 102);
+                display:inline;
+                text-decoration: none;
+            }
+            ul#navbar{
+                align-content: right;
+                text-align: right;
+            }
+            ul#navbar li{
+                font: 20px arial, sans-serif;
+                display: inline;
+                margin:10px;
+            }
+            ul#navbar li a:link{
+                text-decoration: none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:visited{
+                text-decoration:none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:hover{
+                color:black;
+                text-shadow: 1px 1px 1px;
+            }
 
-<head>
-  
-  <title> Daisy, the Pathfinder</title> 
-  
-</head>
+            div a img{
+                width: 100%;
+                height: 400px;
+                object-fit:cover;
+                filter:brightness(60%);
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+            div a img:hover{
+                opacity:0.9;
+            }           
+            div a div{
+                position: absolute;
+                width:30%;
+                height:20%;
+                left: 35%;
+                align-self: center;
+                border: 6px solid white;
+                font: 30px arial, sans-serif;
+                text-align: center;
+                padding-top: 5%;
+                color: white; 
+            }
+            div#explanation a div{
+                top: 300px;
+            }
+            div#dfs a div{
+                top: 700px;
+            }
+            div#bfs a div{
+                top: 1100px;
+            }
+            div#bruteforce a div{
+                top:1510px;
+            }
+            div#implementation a div{
+                top:1910px;
+            }
+            div#tips a div{
+                top:2320px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id = "header">2014312455 | 19-2 Web</p>
+        <hr/>
+        <br/>
+        <p id="project_name"><a href="index.html">Algorithms for Samsung SW certificate A</a></p>
+        <ul id="navbar">
+            <li><a href="explanation.html">SW Certificate A?</a></li>
+            <li><a href="dfs.html">DFS</a></li>
+            <li><a href="bfs.html">BFS</a></li>
+            <li><a href="bruteforce.html">Brute-Force</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="tips.html">Tips</a></li>
+        </ul>
+        <br/>
+        <div id="explanation">
+            <a href="explanation.html">
+                <img src="https://www.artibeus.com/wp-content/uploads/2018/05/computer-software-featured-image.jpg" id="explanationimg" />
+                <div id="sub" onmouseover="keep('explanation')" onmouseout="restore('explanation')">
+                    <p id="explanation">SW certificate A?</p>
+                </div>
+            </a>
+        </div>
+        <div id="dfs">
+            <a href="dfs.html">
+                <img src="https://raw.githubusercontent.com/Gummybearr/Gummybearr.github.io/master/dfsimg.jpg" id="dfsimg" />
+                <div id="sub">
+                    <p id="dfs">dfs</p>
+                </div>
+            </a>
+        </div>
+        <div id="bfs">
+            <a href="bfs.html">
+                <img src="https://raw.githubusercontent.com/Gummybearr/Gummybearr.github.io/master/bfsimg.jpg" id="bfsimg" />
+                <div id="sub">
+                    <p id="bfs">bfs</p>
+                </div>
+            </a>
+        </div>
+        <div id="bruteforce">
+            <a href="bruteforce.html">
+                <img src="https://cdn.comparitech.com/wp-content/uploads/2018/05/brute-force.jpg" id="simulationimg" />
+                <div id="sub">
+                    <p id="bruteforce">브루트포스</p>
+                </div>
+            </a>
+        </div>
+        <div id="implementation">
+            <a href="implementation.html">
+                <img src="https://newintelligence.ca/wp-content/uploads/2017/06/DW-Implementation-Blog.jpeg" id="implementationimg" />
+                <div id="sub">
+                    <p id="implementation">구현</p>
+                </div>
+            </a>
+        </div>
+        <div id="tips">
+            <a href="tips.html">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lego-pieces-are-seen-at-the-annual-london-model-engineering-news-photo-1084546964-1548274912.jpg" id="tipsimg" />
+                <div id="sub">
+                    <p id="tips">Tips</p>
+                </div>
+            </a>
+        </div>
+        <hr/>
+        <p>19-fall Web Programming Assignment for Midterm</p>
+        <audio src="DIDN'T STAND A CHANCE - Travis Garland.mp3" autoplay></audio>
 
-<body>
-  <h1> Welcome to Daisy! :) </h1>
 
-</body>
-
-
+        <script>
+            function keep(obj){
+                var x = document.getElementById(obj);
+                x.style.opacity="0.9";
+            }
+            function restore(obj){
+                var x = document.getElementById(obj);
+                x.style.opacity="1.0"
+            }
+        </script>
+    </body>
 
 </html>
