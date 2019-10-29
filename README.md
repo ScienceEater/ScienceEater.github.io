@@ -1,3 +1,3 @@
-# Gummybearr.github.io
+# ScienceEater.github.io
 
-homepage test
+Welcome to Data Science World:)
