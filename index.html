@@ -6,24 +6,59 @@
             데이지(DataScience Genie)
         </title>
         <style>
-            video#frontpage{
-                width: 100%;
-                height: 100%;
+            div#graphic{
+                position:absolute;
+                top:0px;
+                width:100%;
+                height:100%;
+                z-index: 0;
             }
-            div#footer span#left {
-                float:left;
-                
+            div#graphic video{
+                width:100%;
+                height:100%;
+                object-fit:fill;
             }
-            div#footer p#right{
-                text-align:right;
+            div#cover{
+                position:absolute;
+                top:0px;
+                width:100%;
+                height:100%;
+                background-color: black;
+                opacity: 0.4;
+                z-index: 100;
             }
+            div#message{
+                position:absolute;
+                top:20%;
+                left:35%;
+                z-index:200;
+            }
+            div#message h2{
+                color: white;
+                font: 50px arial, sans-serif;
+                /*animation:2s appear;*/
+            }
+            /*@keyframes appear{
+                0%{visibility: hidden;}
+                50%{visibility:hidden;}
+                100%{visibility:visible;}                
+            }*/
         </style>
     </head>
     <body>
-        <video width="100%" autoplay loop muted>
-            <source src="frontpagegraphic.mp4" type="video/mp4">
-            This does not work now
-        </video>
+        <script>
+        
+        </script>
+        <div id="graphic">
+            <video autoplay loop muted>
+                <source src="frontpagegraphic.mp4" type="video/mp4">
+                This does not work now
+            </video>
+        </div>
+        <div id="cover"></div>
+        <div id="message">
+            <h2>Welcome to Daisy</h2>
+        </div>
     </body>
 
 </html>
