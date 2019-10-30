@@ -36,13 +36,70 @@
             div#message h2{
                 color: white;
                 font: 50px arial, sans-serif;
-                /*animation:2s appear;*/
+                opacity:1;
+                animation:2s appear;
+                animation-timing-function: ease-in;
             }
-            /*@keyframes appear{
-                0%{visibility: hidden;}
-                50%{visibility:hidden;}
-                100%{visibility:visible;}                
+            @keyframes appear{
+                0%{opacity:0}
+                50%{opacity:0}
+                100%{opacity:1;}                
+            }
+            div#message h2:after{
+                content:"";
+                display:block;
+                width:100%;
+                border-bottom:3px solid white;
+                margin:20px auto;
+                opacity:1;
+                animation: appear2 3s;
+                /*animation: linearwipe 1s steps(60, end);
+                animation-delay: 2s;*/
+                animation-timing-function: ease-in;
+            }
+            @keyframes appear2{
+                0%{opacity:0;}
+                66%{opacity:0;}
+                /*67%{animation:linearwipe 1s steps(60, end);}*/
+                90%{opacity:1;}
+                100%{opacity:1;}
+            }
+            /*@keyframes linearwipe{
+                from{width:0;}
             }*/
+            div#menu{
+                position:absolute;
+                top: 60%;
+                left:15%;
+                width:100%;
+                z-index: 200;
+                text-decoration:none;
+                font: 25px arial, sans-serif;
+                visibility: visible;
+                opacity:1;
+                animation:appear3 4s;
+                animation-timing-function: ease-in;
+            }
+            div#menu a{
+                margin:3%;
+            }
+            div#menu a:link{
+                text-decoration: none;
+                color:white;
+            }
+            div#menu a:visited{
+                text-decoration:none;
+                color: white;
+            }
+            div#menu a:hover{
+                color:white;
+                text-shadow: 1px 1px 1px;
+            }
+            @keyframes appear3{
+                0%{opacity:0;visibility: hidden;}
+                75%{opacity:0;visibility:visible;}
+                100%{opacity:1;visibility:visible;}
+            }
         </style>
     </head>
     <body>
@@ -56,9 +113,14 @@
             </video>
         </div>
         <div id="cover"></div>
-        <div id="message">
-            <h2>Welcome to Daisy</h2>
+        <div id="message"><h2>Welcome to Daisy</h2></div>
+        <div id="menu">
+            <a href="dfs.html" id="usemodel">모델 이용</a>
+            <a href="bfs.html" id="learnbasic">이론 기본과정</a>
+            <a href="bruteforce.html" id="learnadvanced">이론 심화과정</a>
+            <a href="explanation.html" id="visitgithub">깃헙 방문</a>
         </div>
     </body>
+
 
 </html>
