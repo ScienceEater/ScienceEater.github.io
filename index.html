@@ -45,12 +45,24 @@
                 50%{opacity:0}
                 100%{opacity:1;}                
             }
+            div#message h2:before{
+                content:"";
+                display:block;
+                width:100%;
+                border-bottom:4px solid white;
+                margin:7% auto;
+                opacity:1;
+                animation: appear2 3s;
+                /*animation: linearwipe 1s steps(60, end);
+                animation-delay: 2s;*/
+                animation-timing-function: ease-in; 
+            }
             div#message h2:after{
                 content:"";
                 display:block;
                 width:100%;
-                border-bottom:3px solid white;
-                margin:20px auto;
+                border-bottom:4px solid white;
+                margin:7% auto;
                 opacity:1;
                 animation: appear2 3s;
                 /*animation: linearwipe 1s steps(60, end);
