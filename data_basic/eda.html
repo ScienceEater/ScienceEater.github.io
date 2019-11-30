@@ -120,7 +120,7 @@
             <h2>목차</h2>
             <ol>
                 <li>탐색적데이터분석(EDA)란?</li>
-                <li>EDA를 적용하는 데이터 분류</li>
+                <li>데이터 분류</li>
                 <li>EDA 실습</li>
             </ol>
             <br/>
@@ -130,33 +130,40 @@
             <img src="http://quality-downloads.com/akinator/img/mk_audio_ad.jpg" id="genie">
             <br/>
             <p>
-                "아키네이터"라는 게임을 해보신 적이 있으신가요? 아키네이터는 사진 속의 캐릭터가 여러 가지의 질문을 통해 
-                사용자가 무슨 인물을 떠올리고 있는지 맞추는 게임입니다. 아주 예전부터 있었던 게임인데요, 내 생각을 정확하게
-                예측하는 아키네이터와 같이 내가 다루는 데이터에 딱 맞는 모델을 찾아주는 프로그램이 있다면 어떨까요? 
-                데이지는 여기에 착안점을 두고 만들어졌습니다. 데이터를 다루는 것이 익숙하지 않아도 좋아요. 데이지가
-                데이터에 어떻게 접근해야 할 지, 그리고 어떤 모델을 써야 하고 나아가 어떻게 데이터분석을 공부하면 좋을 지를 
-                알려줄 것이니까요. 데이지를 다음과 같이 구분할 수 있습니다.
+                탐색적데이터분석(Exploratory Data Analysis, EDA)란 관찰하기입니다. EDA는 
+                주어진 자료를 선택하고, 시각화하고, 비교하는 과정을 통해 데이터가 가지고 있는 특성을 보다 깊에 이해하기 위한
+                과정을 의미합니다. 어떠한 가정을 내리기 전에 데이터가 가진 특성들을 살펴봄으로써 변수들 간의 관계, 주의해야 할
+                요소 들을 파악할 수 있기에, 데이터 분석에 있어서는 Feature Engineering과 함께 "데이터 전처리"라는 명칭으로 
+                불리기도 합니다. 데이터 분석에 사용되는 자료들은 종류에 따라 시각화 방법과 분석 방법이 다른데요, 이번 장에서는
+                데이터의 타입을 분류하고 각각의 타입에 맞는 접근방법을 설명하겠습니다.
             </p>    
+            <br/>
+            <h2>2. 데이터 분류</h2>
+            <img src="https://d3jh33bzyw1wep.cloudfront.net/s3/W1siZiIsIjIwMTgvMDMvMjkvMTQvMTYvNTYvNzM5L2RhdGEtYW5hbHl0aWNzLXRvby1tdWNoLWRhdGEuanBnIl0sWyJwIiwidGh1bWIiLCI4MDB4NjUwXHUwMDNjIl1d" id="whytest">
+            <p>데이터를 분류하는 이유는 데이터에 따라 사용되는 통계적 기법이 다르고, 따라서 접근방법이 다르기 때문입니다.
+                통계적으로 의미있는 결과를 도출하기 위해서는 올바른 접근방법을 사용해야 하고, 이는 곧 분석의 성공여부를 결정짓는 중요한 요소입니다.
+                데이터를 크게 다음과 같이 분류할 수 있습니다. </p>
             <ul>
-                <li>데이터분석 모델 추천 프로그램</li>
-                <li>초심자를 위한 학습 자료</li>
-                <li>깊은 이해를 원하는 사람들을 위한 학습 자료</li>
+                <li>Categorical data: Nominal / Ordinal </li>
+                <li>Continuous data: Interval / Ratio </li>
             </ul>
             <p>
-                아래 내용은 논의를 거쳐 작성할 계획입니다.  
-            </p>
-            
-            <br/>
-            <h2>2. 모델 이용하기</h2>
-            <img src="https://d3jh33bzyw1wep.cloudfront.net/s3/W1siZiIsIjIwMTgvMDMvMjkvMTQvMTYvNTYvNzM5L2RhdGEtYW5hbHl0aWNzLXRvby1tdWNoLWRhdGEuanBnIl0sWyJwIiwidGh1bWIiLCI4MDB4NjUwXHUwMDNjIl1d" id="whytest">
+                먼저, 이산적 데이터(Categorical Data)는 다시 두 가지 분류로 나뉩니다. 먼저, 순서가 없는 자료는 명목(Nominal) 자료입니다. 남자와 여자, 
+                있다와 없다 등 단순한 차이를 나타내는 자료가 이 분류에 속합니다. 데이터를 요약할 때는 빈도, 비율, 데이터를 시각화할 때는 바 차트, 파이 차트 등을
+                나타내면 효과적으로 표현할 수 있습니다. 한편, 순서가 있는 자료는 순서(Ordinal) 자료입니다. 1등과 2등처럼 순서의 차이가 
+                의미의 차이로 이어지는 자료를 의미합니다. 요약에는 빈도, 비율, 최빈값, 중간값, 4분위값 등이 사용디고
+                시각화에는 바 차트와 파이 차트가 사용됩니다.
+            </p> 
             <p>
-                TBD
-            </p>
-            
+                둘째로, 연속적 데이터(Continuous Data)는 구간(Internal) 자료와 비율(Ratio) 자료로 나뉩니다. 데이터 구간 사이의 차이가 일정한 자료는 구간 자료입니다.
+                시각, 온도와 같이 절대적인 영점이 없는, 상대적인 영점이 있는 자료가 이 분류에 속합니다. 이에 반해, 데이터 구간 사이의 차이가 일정하지 않은 자료는 
+                비율자료입니다. 나이, 몸무게와 같이 절대적인 영점이 있는 자료가 이 분류에 속합니다. 연속적 데이터를 요약하는 방법에는 퍼센트, 중간값, 4분위값, 평균, 
+                범위 등이 사용되고, 시각화에는 히스토그램, 박스플롯 등이 사용됩니다.
+            </p> 
             <br/>
-            <h2>3. 데이지 SWOT 분석</h2>
+            <h2>3. EDA 실습</h2>
             <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q1/gap-analysis/gap-analysis-header@2x.png" id="prerequisite">
-            <p>TBD</p>
+            <p>캐글의 튜토리얼 자료인 타이타닉 데이터셋을 통해 EDA를 실습해보겠습니다.</p>
             
             <br/>
             
