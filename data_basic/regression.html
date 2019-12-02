@@ -1,1 +1,192 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            데이지(DataScience Genie)
+        </title>
+
+        <style>
+            p#header{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                margin-top:30px;
+                margin-bottom: 20px;
+            }
+            p#project_name a{
+                font: 30px arial, sans-serif;
+                color: rgb(102, 102, 102);
+                display:inline;
+                text-decoration: none;
+            }
+            ul#navbar{
+                align-content: right;
+                text-align: right;
+            }
+            ul#navbar li{
+                font: 20px arial, sans-serif;
+                display: inline;
+                margin:10px;
+            }
+            ul#navbar li a:link{
+                text-decoration: none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:visited{
+                text-decoration:none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:hover{
+                color:black;
+                text-shadow: 1px 1px 1px;
+            }
+            
+            div img{
+                width: 100%;
+                height: 350px;
+                object-fit:cover;
+                filter:brightness(80%);
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+            div#content img{
+                height:200px;
+                object-fit: cover;
+                filter:brightness(100%);
+            }
+            div#content img#genie{
+                object-position:top;
+            }
+            div div{
+                position: absolute;
+                width:30%;
+                height:20%;
+                left: 35%;
+                align-self: center;
+                border: 6px solid white;
+                font: 30px arial, sans-serif;
+                text-align: center;
+                padding-top: 5%;
+                color: white; 
+            }
+            div#explanation div{
+                top: 300px;
+            }
+            div#content{
+                padding: 10%;
+                padding-top:5%;
+                font: 16px arial, sans-serif;
+            }
+            div#content ol li{
+                font: 20px arial, sans-serif;
+                margin: 2px;
+            }
+            div#content ul li{
+                font: 20px arial, sans-serif;
+                margin: 2px;
+            }
+            div#content ul a{
+                text-decoration: none;
+                font: 20px arial, sans-serif;
+                margin: 2px;
+                color: black;
+            }
+            div#content ul a:hover{
+                text-decoration: none;
+                text-shadow: 1px 1px 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id = "header"> SKKU Co-DeepLearning Project | 19-fall</p>
+        <hr/>
+        <br/>
+        <p id="project_name"><a href="../index.html">데이지(DataScience Genie)</a></p>
+        <ul id="navbar">
+            <li><a href="../explanation.html">데이지 모델</a></li>
+            <li><a href="../learn.html">이론 기본과정</a></li>
+            <li><a href="https://github.com/ScienceEater/ScienceEater.github.io" target="_blank">깃헙방문</a></li>
+        </ul>
+        <br/>
+
+        <hr/>
+        <div id="explanation">
+            <img src="https://www.10wallpaper.com/wallpaper/1920x1200/1212/The_signpost_After_the_scenery-2012_landscape_Featured_Wallpaper_1920x1200.jpg" id="explanationimg" />
+            <div id="sub">
+                <p id="explanation">탐색적데이터분석</p>
+            </div>
+        </div>
+        <div id="content">
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <h2>목차</h2>
+            <ol>
+                <li>탐색적데이터분석(EDA)란?</li>
+                <li>데이터 분류</li>
+                <li>EDA 실습</li>
+            </ol>
+            <br/>
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <br/>
+            <h2>1. 탐색적데이터분석(Exploratory Data Analysis)란?</h2>
+            <img src="http://quality-downloads.com/akinator/img/mk_audio_ad.jpg" id="genie">
+            <br/>
+            <p>
+                탐색적데이터분석(Exploratory Data Analysis, EDA)란 관찰하기입니다. EDA는 
+                주어진 자료를 선택하고, 시각화하고, 비교하는 과정을 통해 데이터가 가지고 있는 특성을 보다 깊에 이해하기 위한
+                과정을 의미합니다. 어떠한 가정을 내리기 전에 데이터가 가진 특성들을 살펴봄으로써 변수들 간의 관계, 주의해야 할
+                요소 들을 파악할 수 있기에, 데이터 분석에 있어서는 Feature Engineering과 함께 "데이터 전처리"라는 명칭으로 
+                불리기도 합니다. 데이터 분석에 사용되는 자료들은 종류에 따라 시각화 방법과 분석 방법이 다른데요, 이번 장에서는
+                데이터의 타입을 분류하고 각각의 타입에 맞는 접근방법을 설명하겠습니다.
+            </p>    
+            <br/>
+            <h2>2. 데이터 분류</h2>
+            <img src="https://d3jh33bzyw1wep.cloudfront.net/s3/W1siZiIsIjIwMTgvMDMvMjkvMTQvMTYvNTYvNzM5L2RhdGEtYW5hbHl0aWNzLXRvby1tdWNoLWRhdGEuanBnIl0sWyJwIiwidGh1bWIiLCI4MDB4NjUwXHUwMDNjIl1d" id="whytest">
+            <p>데이터를 분류하는 이유는 데이터에 따라 사용되는 통계적 기법이 다르고, 따라서 접근방법이 다르기 때문입니다.
+                통계적으로 의미있는 결과를 도출하기 위해서는 올바른 접근방법을 사용해야 하고, 이는 곧 분석의 성공여부를 결정짓는 중요한 요소입니다.
+                데이터를 크게 다음과 같이 분류할 수 있습니다. </p>
+            <ul>
+                <li>Categorical data: Nominal / Ordinal </li>
+                <li>Continuous data: Interval / Ratio </li>
+            </ul>
+            <p>
+                먼저, 이산적 데이터(Categorical Data)는 다시 두 가지 분류로 나뉩니다. 먼저, 순서가 없는 자료는 명목(Nominal) 자료입니다. 남자와 여자, 
+                있다와 없다 등 단순한 차이를 나타내는 자료가 이 분류에 속합니다. 데이터를 요약할 때는 빈도, 비율, 데이터를 시각화할 때는 바 차트, 파이 차트 등을
+                나타내면 효과적으로 표현할 수 있습니다. 한편, 순서가 있는 자료는 순서(Ordinal) 자료입니다. 1등과 2등처럼 순서의 차이가 
+                의미의 차이로 이어지는 자료를 의미합니다. 요약에는 빈도, 비율, 최빈값, 중간값, 4분위값 등이 사용디고
+                시각화에는 바 차트와 파이 차트가 사용됩니다.
+            </p> 
+            <p>
+                둘째로, 연속적 데이터(Continuous Data)는 구간(Internal) 자료와 비율(Ratio) 자료로 나뉩니다. 데이터 구간 사이의 차이가 일정한 자료는 구간 자료입니다.
+                시각, 온도와 같이 절대적인 영점이 없는, 상대적인 영점이 있는 자료가 이 분류에 속합니다. 이에 반해, 데이터 구간 사이의 차이가 일정하지 않은 자료는 
+                비율자료입니다. 나이, 몸무게와 같이 절대적인 영점이 있는 자료가 이 분류에 속합니다. 연속적 데이터를 요약하는 방법에는 퍼센트, 중간값, 4분위값, 평균, 
+                범위 등이 사용되고, 시각화에는 히스토그램, 박스플롯 등이 사용됩니다.
+            </p> 
+            <br/>
+            <h2>3. EDA 실습</h2>
+            <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q1/gap-analysis/gap-analysis-header@2x.png" id="prerequisite">
+            <p>캐글의 튜토리얼 자료인 타이타닉 데이터셋을 통해 EDA를 실습해보겠습니다. </p>
+            <a href="edaCode.html">실습 화면으로 이동하기</a>
+            <br/>
+            
+            <br/><br/><br/><br/>
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <p>블로그의 내용이 도움이 되었나요? 저에게 주신 의견을 바탕으로 더 나은 컨텐츠를 만들어갈게요:)</p>
+            <form>
+                <input type="radio" name="rate">매우 만족해요
+                <input type="radio" name="rate">나름 만족해요
+                <input type="radio" name="rate">그저 그랬어요
+                <input type="radio" name="rate">조금 별로에요
+                <input type="radio" name="rate">매우 별로에요
+                <p>저에게 해주실 말이 있으신가요?</p>
+                <textarea id="feedback" rows="5" cols=100%></textarea>
+                <br/>
+                <input type="submit" value="제출하기" style="display: inline;" onclick="alert('좋은 의견 감사합니다:)')">
+                <input type="reset" value="초기화" style="display: inline">
+            </form>
+        </div>
+        <br/>
+        <hr/>
+        <p>19-fall SKKU Co-DeepLearning Project Daisy</p>
+    </body>
+
+</html>
+
