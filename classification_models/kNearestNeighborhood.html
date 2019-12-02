@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            데이지(DataScience Genie)
+        </title>
+
+        <style>
+            p#header{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                margin-top:30px;
+                margin-bottom: 20px;
+            }
+            p#project_name a{
+                font: 30px arial, sans-serif;
+                color: rgb(102, 102, 102);
+                display:inline;
+                text-decoration: none;
+            }
+            ul#navbar{
+                align-content: right;
+                text-align: right;
+            }
+            ul#navbar li{
+                font: 20px arial, sans-serif;
+                display: inline;
+                margin:10px;
+            }
+            ul#navbar li a:link{
+                text-decoration: none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:visited{
+                text-decoration:none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:hover{
+                color:black;
+                text-shadow: 1px 1px 1px;
+            }
+            
+            div img{
+                width: 100%;
+                height: 350px;
+                object-fit:cover;
+                filter:brightness(80%);
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+            div#content img{
+                height:200px;
+                object-fit: cover;
+                filter:brightness(100%);
+            }
+            div#content img#genie{
+                object-position:top;
+            }
+            div div{
+                position: absolute;
+                width:30%;
+                height:20%;
+                left: 35%;
+                align-self: center;
+                border: 6px solid white;
+                font: 30px arial, sans-serif;
+                text-align: center;
+                padding-top: 5%;
+                color: white; 
+            }
+            div#explanation div{
+                top: 300px;
+            }
+            div#content{
+                padding: 10%;
+                padding-top:5%;
+                font: 16px arial, sans-serif;
+            }
+            div#content ol li{
+                font: 20px arial, sans-serif;
+                margin: 2px;
+            }
+            div#content ul li{
+                font: 20px arial, sans-serif;
+                margin: 2px;
+            }
+            div#content ul a{
+                text-decoration: none;
+                font: 20px arial, sans-serif;
+                margin: 2px;
+                color: black;
+            }
+            div#content ul a:hover{
+                text-decoration: none;
+                text-shadow: 1px 1px 1px;
+            }
+            div#content img#one{
+                width:400px;
+                height:250px;
+                object-fit:fill;
+            }
+            div#content img#two{
+                width:400px;
+                height:250px;
+                object-fit:fill;
+            }
+            div#content img#three{
+                width:400px;
+                height:250px;
+                object-fit:fill;
+            }
+        </style>
+    </head>
+    <body>
+        <p id = "header"> SKKU Co-DeepLearning Project | 19-fall</p>
+        <hr/>
+        <br/>
+        <p id="project_name"><a href="../index.html">데이지(DataScience Genie)</a></p>
+        <ul id="navbar">
+            <li><a href="../explanation.html">데이지 모델</a></li>
+            <li><a href="../learn.html">이론 기본과정</a></li>
+            <li><a href="https://github.com/ScienceEater/ScienceEater.github.io" target="_blank">깃헙방문</a></li>
+        </ul>
+        <br/>
+
+        <hr/>
+        <div id="explanation">
+            <img src="https://www.10wallpaper.com/wallpaper/1920x1200/1212/The_signpost_After_the_scenery-2012_landscape_Featured_Wallpaper_1920x1200.jpg" id="explanationimg" />
+            <div id="sub">
+                <p id="explanation">K-최근접이웃</p>
+            </div>
+        </div>
+        <div id="content">
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <h2>목차</h2>
+            <ol>
+                <li>K-최근접이웃(K-nearest neighborhood)이란?</li>
+                <li>KNN의 이해</li>
+                <li>KNN 실습</li>
+            </ol>
+            <br/>
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <br/>
+            <h2>1. K-최근접이웃(Principal Component Analysis)이란?</h2>
+            <img src="http://quality-downloads.com/akinator/img/mk_audio_ad.jpg" id="genie">
+            <br/>
+            <p>
+                K-최근접이웃(K-nearest neighborhood, 이하 KNN)은 주변 둘러보기입니다. 주어진 데이터를 모두 저장한 후 새로운
+                데이터가 입력되면 입력 데이터와 가장 근접한 k개의 데이터를 살펴본 후, 데이터가 어디에 속하는 지를 정하는 알고리즘입니다.
+            </p>    
+            <br/>
+            <h2>2. KNN이해하기</h2>
+            <img src=knnone.jpg id="one">
+            <p>
+                2차원 데이터를 통해 KNN을 적용해보겠습니다. 아래와 같은 데이터에 데이터 1,2,3이 들어가는 상황을 가정해
+                보겠습니다. 가장 먼저 해야 하는 일은 k의 개수를 정해주는 것인데, 이번 예시에서의 k는 3으로 정하겠습니다.
+            </p>
+            <img src=knntwo.jpg id="two">
+            <p>
+                각각의 데이터에 대해 가장 인접한 3개의 점을 살펴보면 다음과 같습니다. 1번은 2개의 삼각형, 1개의 원과 인접해있습니다.
+                2번은 3개의 원, 3번은 3개의 삼각형과 인접해있습니다. 이는 1번은 삼각형, 2번은 원, 3번은 삼각형으로 데이터 셋에
+                입력될 것을 의미합니다. 3개의 데이터를 추가로 학습한 데이터를 시각화하면 다음과 같습니다.
+            </p>
+            <img src=knnthree.jpg id="three">
+            <p>
+                KNN은 먼저 주어진 데이터를 학습한 뒤, 새로 들어오는 데이터는 k개의 인접한 이웃을 보고 판단합니다. KNN은 기계학습에 
+                사용되는 모델 중 비교적 간단하여 학습에 소요되는 시간이 짧습니다. 하지만 k의 개수에 따라 모델의 정확도는 
+                다소 떨어질 수 있으며, 데이터가 군집이 되어 있지 않은 경우에는 특히 정확도가 떨어진다는 단점이 있습니다.
+            </p>
+            <br/>
+            <h2>3. KNN 실습</h2>
+            <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q1/gap-analysis/gap-analysis-header@2x.png" id="prerequisite">
+            <a href="kNearestNeighborhoodCode.html">실습 화면으로 이동하기</a>
+            <br/>
+            <br/><br/><br/><br/>
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <p>블로그의 내용이 도움이 되었나요? 저에게 주신 의견을 바탕으로 더 나은 컨텐츠를 만들어갈게요:)</p>
+            <form>
+                <input type="radio" name="rate">매우 만족해요
+                <input type="radio" name="rate">나름 만족해요
+                <input type="radio" name="rate">그저 그랬어요
+                <input type="radio" name="rate">조금 별로에요
+                <input type="radio" name="rate">매우 별로에요
+                <p>저에게 해주실 말이 있으신가요?</p>
+                <textarea id="feedback" rows="5" cols=100%></textarea>
+                <br/>
+                <input type="submit" value="제출하기" style="display: inline;" onclick="alert('좋은 의견 감사합니다:)')">
+                <input type="reset" value="초기화" style="display: inline">
+            </form>
+        </div>
+        <br/>
+        <hr/>
+        <p>19-fall SKKU Co-DeepLearning Project Daisy</p>
+    </body>
+
+</html>
