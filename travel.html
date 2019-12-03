@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            데이지(DataScience Genie)
+        </title>
+
+        <style>
+            p#header{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                margin-top:30px;
+                margin-bottom: 20px;
+            }
+            p#project_name a{
+                font: 30px arial, sans-serif;
+                color: rgb(102, 102, 102);
+                display:inline;
+                text-decoration: none;
+            }
+            ul#navbar{
+                align-content: right;
+                text-align: right;
+            }
+            ul#navbar li{
+                font: 20px arial, sans-serif;
+                display: inline;
+                margin:10px;
+            }
+            ul#navbar li a:link{
+                text-decoration: none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:visited{
+                text-decoration:none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:hover{
+                color:black;
+                text-shadow: 1px 1px 1px;
+            }
+            
+            div img{
+                width: 100%;
+                /*height: 350px;*/
+                object-fit:cover;
+                filter:brightness(30%);
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+            /*div#content img{
+                height:200px;
+                object-fit: cover;
+                filter:brightness(100%);
+            }*/
+            div ul{
+                position: absolute;
+                left:0px;
+                align-content: right;
+                text-align: right;
+            }
+            div ul#basicnav1{
+                top:50%;
+            }
+            div ul#basicnav2{
+                top:70%;
+            }
+            div ul#basicnav3{
+                top:90%;
+            }
+            div ul li{
+                font: 20px arial, sans-serif;
+                display: inline;
+                margin:10px;
+            }
+            div ul li a:link{
+                text-decoration: none;
+                color:white;
+            }
+            div ul li a:visited{
+                text-decoration:none;
+                color:white;
+            }
+            div ul li a:hover{
+                color: rgb(5, 14, 14);
+                text-shadow: 1px 1px 1px;
+            }
+            div h2{
+                color:white;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <p id = "header"> SKKU Co-DeepLearning Project | 19-fall</p>
+        <hr/>
+        <br/>
+        <p id="project_name"><a href="index.html">데이지(DataScience Genie)</a></p>
+        <ul id="navbar">
+            <li><a href="explanation.html">데이지 모델</a></li>
+            <li><a href="learn.html">이론일반</a></li>
+            <li><a href="https://github.com/ScienceEater/ScienceEater.github.io" target="_blank">깃헙방문</a></li>
+        </ul>
+        <br/>
+
+        <hr/>
+        <div id="explanation">
+            <img src="https://miro.medium.com/max/1187/1*0FqDC0_r1f5xFz3IywLYRA.jpeg" id="explanationimg"/>
+            <ul id="basicnav1">
+                <h2>데이터 분석 예시<hr/></h2>
+                <li><a href="example/titanic.html">타이타닉 생존 예측</a></li>
+                <li><a href="example/housePrice.html">집값을 결정하는 변수</a></li>
+                
+            </ul>
+            <!-- TEMPORAL ANNOTATION
+            <ul id="basicnav2">
+                <h2>Classification Models<hr/></h2>
+                <li><a href="classification_models/decisionTree.html">Decision Tree</a></li>
+                <li><a href="classification_models/kNearestNeighborhood.html">K-Nearest Neighborhood</a></li>
+                <li><a href="classification_models/logisticRegression.html">Logistic Regression</a></li>
+                <li><a href="classification_models/naiveBayes.html">Naive Bayes</a></li>
+                <li><a href="classification_models/discriminantAnalysis.html">Discriminant Analysis</a></li>
+                <li><a href="classification_models/neuralNetworks.html">Neural Networks</a></li>
+            </ul>
+            <ul id="basicnav3">
+                <h2>Clustering Models<hr/></h2>
+                <li><a href="clustering_models/kMeansClustering.html">K-means Clustering</a></li>
+                <li><a href="clustering_models/kMedoidsClustering.html">K-medoids Clustering</a></li>
+            </ul>
+            -->
+        </div>
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <p>블로그의 내용이 도움이 되었나요? 저에게 주신 의견을 바탕으로 더 나은 컨텐츠를 만들어갈게요:)</p>
+            <form>
+                <input type="radio" name="rate">매우 만족해요
+                <input type="radio" name="rate">나름 만족해요
+                <input type="radio" name="rate">그저 그랬어요
+                <input type="radio" name="rate">조금 별로에요
+                <input type="radio" name="rate">매우 별로에요
+                <p>저에게 해주실 말이 있으신가요?</p>
+                <textarea id="feedback" rows="5" cols=100%></textarea>
+                <br/>
+                <input type="submit" value="제출하기" style="display: inline;" onclick="alert('좋은 의견 감사합니다:)')">
+                <input type="reset" value="초기화" style="display: inline">
+            </form>
+        </div>
+        <br/>
+        <hr/>
+        <p>19-fall SKKU Co-DeepLearning Project Daisy</p>
+    </body>
+
+</html>
