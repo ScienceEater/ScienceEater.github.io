@@ -152,21 +152,21 @@
             <h2>2. 로지스틱 모형 속으로</h2>
             <p>
                 &nbsp;긴 이야기 끝에 그 ‘로지스틱’에 도달했습니다. 로지스틱을 검색해 보셨다면 흔히 물류, 병참, 보급이라는 단어의 뜻으로 사용되는 걸 알 수 있습니다. 하지만 로지스틱 함수, 방정식은 본래 생물학에 그 뿌리를 두고 있습니다. 1838년 벨기에의 수학자 겸 생물학자인 Pierre François Verhulst 가 인구를 비롯 생물의 개체수 증가를 설명하는 모델로 고안했던 방정식입니다. 이를 통해 동물 개체군의 증가, 유행병의 확산 속도 또는 암세포의 증식 속도, 사회에서의 정보 확산, 광고의 영향 등을 분석할 수 있었습니다. 제한된 환경, 억제를 표현하는 환경 수용력과 그 생물이 도달할 수 있는 최대 증가율(내적 증가율)을 표현한 것으로 처음에 작았던 개체수로 시작한 그래프는 급히 상승하다가 일정한 값으로 수렴하는 시그모이드 곡선의 형태가 됩니다.
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR1미분방정식.JPG" style="max-width: 100%; height: auto;"> <br>
                 <br><br> &nbsp;K는 환경 수용력 (특정 환경에서 살 수 있는 개체수의 정원), r은 내적 증가율 (그 생물이 도달할 수 있는 최대 증가율), N은 개체 수를 의미합니다.
                 <br>
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR2시그모이드.png" style="max-width: 100%; height: auto;"> <br>
                 <br><br>&nbsp;실제로도 많은 자연, 사회현상에서는 특정 변수에 대한 확률값이 선형이 아닌 S곡선 형태를 따르는 경우가 많다고 합니다. 로지스틱 함수의 독립변수로는 실수 범위 내에서 어떤 값도 입력 받을 수 있지만, 출력 결과인 종속변수는 항상 0에서 1 사이의 값을 가집니다. 즉 확률 밀도함수의 요건을 충족시키는 함수입니다. 이는 로지스틱 회귀의 목적과 완벽하게 부합합니다.
                 <br>
                 <br><br> &nbsp;그렇다면 이 로지스틱 함수에 어떻게 데이터를 매핑(연결)시킬 수 있을까요? 이는 오즈(odds)를 로짓(logit) 변환을 수행함으로써 얻어집니다. 
                 <br>
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR3odds.JPG" style="max-width: 100%; height: auto;"> <br>
                 <br><br> &nbsp; 오즈는 우리말로 ‘승산’ 또는 ‘승산비’라고 합니다. 성공 확률이 실패 확률에 비해서 몇 배 높은가를 나타내며 여기서 ‘이김’이라는 개념을 해당 부류에 속할 확률로 표현하면 식을 이용할 수 있습니다.
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR4logit.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR5logitFunction.JPG" style="max-width: 100%; height: auto;"> <br>
                 <br><br> &nbsp;로짓은 오즈에 로그를 취한 함수로서 입력 값의 범위가 0~1일 때 출력 값의 범위를 무한대로 조정하기 위해서 이용됩니다. 이렇게 조정된 값을 로지스틱 함수에 입력해서 매핑시킬 수 있습니다.
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
-                <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR6조건부확률.JPG" style="max-width: 100%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR7logisticfuntion.JPG" style="max-width: 100%; height: auto;"> <br>
                 <br><br> &nbsp;로지스틱 함수에 독립 변수 x가 주어졌을 때, 종속 변수가 범주에 (여기서는 y=1) 속할 확률은 위와 같습니다. 해당 범주에 분류될 조건부 확률을 표현하면 위의 식과 같으며 그래프는 시그모이드의 형태로 S-곡선과 동일하게 표현됩니다. 이제 기본적인 로지스틱 모델을 가지고 실제 데이터 사례에 맞춰 적용해 보겠습니다.
                 <br>
             </p>
@@ -177,11 +177,11 @@
             <h3>3.1 Binary Logistic Regression</h3>
              <p>
                  &nbsp;먼저 이항 로지스틱 회귀입니다. 오로지 2개의 가능한 결과만을 고려합니다. 따라서 이항 분포 (또는 베르누이 분포)를 따릅니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR8이항.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;이렇게 표현된 확률 변수를 통해서 Y결과값을 추정하는 방법은 ‘최대 우도 추정 (Maximum Likelihood Estimation)이 있습니다. 로지스틱 회귀 모델을 위해서 로그값으로 만든 Log-likelihood Function을 최대값으로 만드는 상관관계 값을 구하는 것입니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR9최대우도.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;최대 우도 함수는 위와 같습니다. 이를 로그로 치환했을 때, 최대값으로 만드는 상관계수들의 값을 찾아내는 것이 Maximum Likelihood Estimation입니다. arg_max {log L} 식을 통해 bias와 weight들을 찾아냅니다. Y의 값을 찾아내기 위해서, 미리 관측된 데이터 값들을 사용합니다. 위의 식을 닫힌 형태(closed-form)의 형태로 찾아내는 것은 불가능하고, 데이터를 통해서 반복적으로 수정해 나가면서 결과 모델이 개선되는지 확인합니다. 결과가 수렴할 때까지의 개선을 반복해서 최종적으로 계수들을 구합니다. 그 알고리즘으로 ‘경사 하강법(gradient descent)’이 있습니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR10멀티최대우도.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;구해진 식을 토대로, 값을 구하게 되고, 결정 경계 (Decision Boundary)를 토대로 이항 Y값을 찾아 분류하면 완성입니다.<br>
                  <br><br>&nbsp;이제 연습 데이터 셋을 통해서 실습을 해보면 다음과 같습니다.
                  <br>코드 파일 링크:
@@ -190,18 +190,18 @@
              <p>
                  &nbsp;다음으로 명목 로지스틱 회귀입니다. Binary한 경우를 일반화하면 가능하기에 multinomial(다항) 로지스틱 회귀라고 불립니다. 여기에 Ordering은 없습니다. 
                  <br><br>&nbsp;다항 로지스틱에서는 다수의 이항 로지스틱을 활용해서 그 결과를 구합니다. 한 경우(한 종속변수의 경우)를 1에서 다른 범주에 속할 확률의 합을 뺀 값임을 활용해서 수식을 세웁니다. 이를 Baseline-category Logit Model이라고 합니다. 이때 식의 개수는 분류의 가짓수 -1이 될 것입니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR11다항1.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;즉, 이렇게 식이 표현되었을 때, 모든 경우의 합이 1임을 활용해서
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR12다항2.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;이렇게 하나의 경우를 baseline으로 생각하고,
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR13다항3.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;J-1개의 식을 세울 수 있습니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR14다항4.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;마지막으로 J의 경우에는 다음과 같이 표현됩니다.
                  <br><br>&nbsp;상관계수들의 최적화는 이항 로지스틱 회귀와 같은 방법으로, 최대 우도 함수를 이용합니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR15다항5.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;다음과 같은 식을 세우고,
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR16다항6.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;로그로 계산한 값을 데이터로 최적화하면 최종적으로 회귀식을 구할 수 있습니다.
                  <br>
                  <br><br>&nbsp;이제 연습 데이터 셋을 통해서 실습을 해보면 다음과 같습니다.
@@ -210,17 +210,17 @@
             <h3>3.3 Ordinal Logistic Regression</h3>
              <p>
                  &nbsp;마지막으로 순서로, ‘서수 로지스틱 회귀’입니다. Multinomial이면서 Ordering이 들어간 결과를 고려합니다. 서열의 차이가 분명하게 드러나는 데이터를 분류해야 하는 가정을 가지고 로지스틱 회귀를 시작합니다. 따라서 이 경우에는 Cumulative Logit Model을 가정해야 합니다. 단순히 명목 데이터만을 분류할 경우와 달리 서수가 있는 분류에 있어서는, base부터 어느 ‘정도’까지를 나누는 판단이 존재하기 때문입니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR17순서1.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;따라서 위와 같이 특정 Order 이하의 분류로 나뉠 가능성을 계산합니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR18순서2.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;이를 로짓에 대응하면 위와 같으며
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
-                 <br><br>&nbsp;회귀식은 다음과 같습니다. 이때 순서형 척도를 종속변수로 하는 로지스틱 회귀분석의 중요한 가정은 회귀계수가 같다고 가정하는 것입니다. 어떠한 독립 변수의 변화가 Y<j에서 특정 j에 특별하게 영향을 미치지 않는다고 가정합니다. 예를 들어 J=3인 경우, j=1/2,3 과 j=1,2/3의 경우에 특정 x라는 독립변수의 변화가 두 분류에 다른 계수로 적용되지는 않게 합니다. 이 때문에 proportional odds model이라고 부르기도 합니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR19순서3.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br><br>&nbsp;회귀식은 다음과 같습니다. 이때 순서형 척도를 종속변수로 하는 로지스틱 회귀분석의 중요한 가정은 회귀계수가 같다고 가정하는 것입니다. 어떠한 독립 변수의 변화가 Y&lt;j에서 특정 j에 특별하게 영향을 미치지 않는다고 가정합니다. 예를 들어 J=3인 경우, j=1/2,3 과 j=1,2/3의 경우에 특정 x라는 독립변수의 변화가 두 분류에 다른 계수로 적용되지는 않게 합니다. 이 때문에 proportional odds model이라고 부르기도 합니다.
+                 <br> <img src="../classification_models/fic/LR20순서4.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;식은 이렇게 표현됩니다.
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR21순서5.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;첫번째 순서에 분류될 확률은 이렇게 식으로 표현되며
-                 <br> <img src="../classification_models/fic/LR.JPG" style="max-width: 100%; height: auto;"> <br>
+                 <br> <img src="../classification_models/fic/LR22순서6.JPG" style="max-width: 100%; height: auto;"> <br>
                  <br><br>&nbsp;일반화한 J라는 순서에는 다음과 같은 확률로 분류됩니다. 이후 계수 추정은 앞서 설명한 다른 로지스틱 회귀와 같은 방법으로 진행합니다.
                  <br>
                  <br><br>&nbsp;이제 연습 데이터 셋을 통해서 실습을 해보면 다음과 같습니다.
