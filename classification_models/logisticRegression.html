@@ -160,13 +160,13 @@
                 <br>
                 <br><br> &nbsp;그렇다면 이 로지스틱 함수에 어떻게 데이터를 매핑(연결)시킬 수 있을까요? 이는 오즈(odds)를 로짓(logit) 변환을 수행함으로써 얻어집니다. 
                 <br>
-                <br> <img src="../classification_models/fic/LR3odds.JPG" style="max-width: 80%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR3odds.JPG" style="max-width: 20%; height: auto;"> <br>
                 <br><br> &nbsp; 오즈는 우리말로 ‘승산’ 또는 ‘승산비’라고 합니다. 성공 확률이 실패 확률에 비해서 몇 배 높은가를 나타내며 여기서 ‘이김’이라는 개념을 해당 부류에 속할 확률로 표현하면 식을 이용할 수 있습니다.
-                <br> <img src="../classification_models/fic/LR4logit.JPG" style="max-width: 80%; height: auto;"> <br>
-                <br> <img src="../classification_models/fic/LR5logitFunction.JPG" style="max-width: 80%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR4logit.JPG" style="max-width: 20%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR5logitFunction.JPG" style="max-width: 20%; height: auto;"> <br>
                 <br><br> &nbsp;로짓은 오즈에 로그를 취한 함수로서 입력 값의 범위가 0~1일 때 출력 값의 범위를 무한대로 조정하기 위해서 이용됩니다. 이렇게 조정된 값을 로지스틱 함수에 입력해서 매핑시킬 수 있습니다.
-                <br> <img src="../classification_models/fic/LR6조건부확률.JPG" style="max-width: 50%; height: auto;"> <br>
-                <br> <img src="../classification_models/fic/LR7logisticfuntion.JPG" style="max-width: 60%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR6조건부확률.JPG" style="max-width: 30%; height: auto;"> <br>
+                <br> <img src="../classification_models/fic/LR7logisticfuntion.JPG" style="max-width: 40%; height: auto;"> <br>
                 <br><br> &nbsp;로지스틱 함수에 독립 변수 x가 주어졌을 때, 종속 변수가 범주에 (여기서는 y=1) 속할 확률은 위와 같습니다. 해당 범주에 분류될 조건부 확률을 표현하면 위의 식과 같으며 그래프는 시그모이드의 형태로 S-곡선과 동일하게 표현됩니다. 이제 기본적인 로지스틱 모델을 가지고 실제 데이터 사례에 맞춰 적용해 보겠습니다.
                 <br>
             </p>
