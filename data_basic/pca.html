@@ -55,6 +55,11 @@
             div#content img#genie{
                 object-position:top;
             }
+            div#content img#pcapic{
+                height:500px;
+                width:700px;
+                object-fit:fill;
+            }
             div div{
                 position: absolute;
                 width:30%;
@@ -93,6 +98,12 @@
                 text-decoration: none;
                 text-shadow: 1px 1px 1px;
             }
+            div#content p{
+                line-height: 200%;
+            }
+            div#content img#pcaintro{
+                object-position: 30%;
+            }
         </style>
     </head>
     <body>
@@ -126,33 +137,35 @@
             <hr style="border: 1px solid black; background-color: black;"/>
             <br/>
             <h2>1. 주성분분석(Principal Component Analysis)이란?</h2>
-            <img src="http://quality-downloads.com/akinator/img/mk_audio_ad.jpg" id="genie">
+            <img src="https://miro.medium.com/max/2990/1*CTPfdbweAI2wSM4n7iWiBQ.jpeg" id="pcaintro">
             <br/>
             <p>
-                주성분분석은 선택과 집중입니다. 선택과 집중이라는 말은 주어진 정보들 중 특정 정보를 선택한다는 말로,
+                주성분분석은 <b>선택과 집중</b>입니다. 선택과 집중이라는 말은 주어진 정보들 중 특정 정보를 선택한다는 말로,
                 일부 정보를 잃어버릴 수도 있다는 것을 의미합니다. 한 마디로, 주성분 분석은 여러 가지의 선택지가 있는 경우 선택지 중에
                 가장 중요도가 높은 선택지를 선택하는 방법론 중 하나입니다. 
             </p>    
             <br/>
             <h2>2. 주성분분석의 이해</h2>
-            <img src="https://d3jh33bzyw1wep.cloudfront.net/s3/W1siZiIsIjIwMTgvMDMvMjkvMTQvMTYvNTYvNzM5L2RhdGEtYW5hbHl0aWNzLXRvby1tdWNoLWRhdGEuanBnIl0sWyJwIiwidGh1bWIiLCI4MDB4NjUwXHUwMDNjIl1d" id="whytest">
+            <img src="https://engineering.stanford.edu/sites/default/files/styles/full_width_banner_tall/public/bmi_banner.jpg?itok=4rOZYbZv" id="pca2">
             <p>
-                정보를 잃어버릴 수도 있는데, PCA를 왜 하는 것일까요? 이는 복잡한 정보를 단순화하여 기계학습을 더욱 용이하게
-                하는 동시에 시각화와 데이터 압축을 용이하게 하기 위해서입니다. 경우에 따라서는 PCA를 통해 데이터를 단순화하는 것이
+                정보를 잃어버릴 수도 있는데, PCA를 왜 하는 것일까요? 이는 <b>복잡한 정보를 단순화하여 기계학습을 더욱 용이하게
+                    하는 동시에 시각화와 데이터 압축을 용이하게 하기 위해서</b>입니다. 경우에 따라서는 PCA를 통해 데이터를 단순화하는 것이
                 기계학습 모델의 정확도를 향상시키기도 합니다. 모든 정보가 통계적으로 의미있는 정보가 되지는 않고, 따라서 모든 정보를 
-                고려하여 기계학습을 진행할 때에 발생할 수 있는 오버피팅(Over-fitting)의 문제를 해결해주기도 하기 때문입니다. 
+                고려하여 기계학습을 진행할 때에 발생할 수 있는 <b>오버피팅(Over-fitting)의 문제를 해결</b>해주기도 하기 때문입니다. 
             </p>
             <p>
                 PCA는 주어진 데이터의 변수들의 관계에 집중합니다. 관계에 집중하기 때문에 데이터의 변수들, 즉 특징들의 관계를
                 유지하는 선에서 그래프 상에서 변수들의 위치를 이동시키기도 합니다. 아래의 그림을 볼까요?
             </p>
+            <br/>
+            <img src="pca_pic.jpg" id="pcapic">
             <p>
                 위의 그래프에는 성분이 두 개가 있다고 할 수 있습니다. 성분 1과 성분 2의 관계가 유지되는 선에서
                 그래프를 회전시킬 경우, 기존데는 두 개의 축을 고려하던 그래프가 1개의 축만을 고려해도 되게 됩니다
             </p>
             <p>
                 고려할 축을 구하는 방법은 다음과 같습니다. 먼저, 성분 1을 가장 잘 설명할 수 있는 직선을 그은 다음, 직선에 수직인 선을
-                하나 더 긋고, 각각의 정보들을 직선에 표현했을 때 점과 직선 사이의 거리가 더 좁은 직선을 찾습니다. 위의 경우
+                하나 더 긋고, 각각의 정보들을 직선에 표현했을 때 <b>점과 직선 사이의 거리가 더 좁은 직선</b>을 찾습니다. 위의 경우
                 오른쪽 하단방향으로 뻗어나가는 직선이 그렇나 직선인데요, 이를 분산이 더 큰 직선이라고도 합니다. 
                 더 많은 정보가 직선과 가까운 거리에 있다는 말이기도 합니다. 선형대수학에서는 이러한 직선을 Eigenvector라고
                 하고, 이 때 데이터와 직선이 떨어진 정도를 Eigenvalue라고 합니다. 즉, 이렇게 찾아낸 직선이 그래프를 회전시켜서 
@@ -168,11 +181,12 @@
             <p>
                 여기서 저희는 선택과 집중을 합니다. 3차원 데이터, 혹은 3차원으로 표현할 수 없는, 특징이 4개 이상인 데이터를 표현하기 
                 위해 저희는 분산이 가장 큰 데이터 2개만을 남겨두고 나머지는 고려하지 않습니다. 데이터를 표현할 수 없는 영역이 생기는
-                동시에, 데이터를 더욱 간단하고 직관적으로 표현할 수 있게 되기 때문입니다. 통계적으로 유의미한 정보에 주목하는 것, 
-                그것이 PCA의 핵심입니다.
+                동시에, 데이터를 더욱 간단하고 직관적으로 표현할 수 있게 되기 때문입니다. <b>통계적으로 유의미한 정보에 주목하는 것, 
+                    그것이 PCA의 핵심</b>입니다.
             </p>
+            <br/>
             <h2>3. 주성분분석 실습</h2>
-            <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q1/gap-analysis/gap-analysis-header@2x.png" id="prerequisite">
+            <img src="https://hackernoon.com/hn-images/1*ssqdxxOFwHSwpTAquq5h5Q.jpeg" id="prerequisite">
             <a href="principalComponentAnalysisCode.html">실습 화면으로 이동하기</a>
             <br/>
             <br/><br/><br/><br/>
