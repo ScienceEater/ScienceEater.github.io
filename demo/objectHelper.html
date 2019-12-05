@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            데이지(DataScience Genie)
+        </title>
+
+        <style>
+            p#header{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                margin-top:30px;
+                margin-bottom: 20px;
+            }
+            p#project_name a{
+                font: 30px arial, sans-serif;
+                color: rgb(102, 102, 102);
+                display:inline;
+                text-decoration: none;
+            }
+            ul#navbar{
+                align-content: right;
+                text-align: right;
+            }
+            ul#navbar li{
+                font: 20px arial, sans-serif;
+                display: inline;
+                margin:10px;
+            }
+            ul#navbar li a:link{
+                text-decoration: none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:visited{
+                text-decoration:none;
+                color:rgb(102, 102, 102);
+            }
+            ul#navbar li a:hover{
+                color:black;
+                text-shadow: 1px 1px 1px;
+            }
+            
+            div img{
+                width: 100%;
+                height: 350px;
+                object-fit:cover;
+                filter:brightness(80%);
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+            div#content img{
+                height:200px;
+                object-fit: cover;
+                filter:brightness(100%);
+            }
+            div#content img#genie{
+                object-position:top;
+            }
+            div div{
+                position: absolute;
+                width:30%;
+                height:20%;
+                left: 35%;
+                align-self: center;
+                border: 6px solid white;
+                font: 30px arial, sans-serif;
+                text-align: center;
+                padding-top: 5%;
+                color: white; 
+            }
+            div#explanation div{
+                top: 300px;
+            }
+            div#content{
+                padding: 10%;
+                padding-top:5%;
+                font: 16px arial, sans-serif;
+            }
+            div#content ol li{
+                font: 20px arial, sans-serif;
+                margin: 2px;
+            }
+            div#content ul li{
+                font: 20px arial, sans-serif;
+                margin: 2px;
+            }
+            div#content ul a{
+                text-decoration: none;
+                font: 20px arial, sans-serif;
+                margin: 2px;
+                color: black;
+            }
+            div#content ul a:hover{
+                text-decoration: none;
+                text-shadow: 1px 1px 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id = "header"> SKKU Co-DeepLearning Project | 19-fall</p>
+        <hr/>
+        <br/>
+        <p id="project_name"><a href="index.html">데이지(DataScience Genie)</a></p>
+        <ul id="navbar">
+            <li><a href="explanation.html">데이지 모델</a></li>
+            <li><a href="learn.html">이론일반</a></li>
+            <li><a href="travel.html" id="example">데이터 분석 예시</a></li>
+            <li><a href="https://github.com/ScienceEater/ScienceEater.github.io" target="_blank">깃헙방문</a></li>
+        </ul>
+        <br/>
+
+        <hr/>
+        <div id="explanation">
+            <img src="https://www.10wallpaper.com/wallpaper/1920x1200/1212/The_signpost_After_the_scenery-2012_landscape_Featured_Wallpaper_1920x1200.jpg" id="explanationimg" />
+            <div id="sub">
+                <p id="explanation">데모 데이지</p>
+            </div>
+        </div>
+        <div id="content">
+            <hr style="border: 1px solid black; background-color: black;"/>
+            <br/>
+            <h2>가장 첫 질문!</h2>
+            <img src="https://github.com/ScienceEater/ScienceEater.github.io/blob/master/demo/noun_Genie%20Lamp_38651.png" style=max-width: 40%; height: auto; id="dgenie"/>
+            <br/>
+            <p>
+               우선 데이터 분석의 먼 길을 떠나기 전, 먼저 우리는 '어디로' 가고 싶은지 알아야 합니다.<br>
+               가장 첫 질문을 드리겠습니다. 데이터 분석을 위한 목적, 문제를 가지고 계신가요?<br>
+               에를 들어, '나는 iris 데이터를 가지고 붓 꽃을 분류해보고 싶어'<br>
+               혹은 '타이타닉 사고의 생존자를 예측해보고 싶어' 등이 있습니다.<br>
+               <br> 평소에 데이터를 통해서 예측하고 싶었던 문제를 생각해보시면 간단합니다.
+            </p>    
+            <p>
+               만약 데이터 분석을 위한 목적, 문제가 있다고 생각하시면!
+               <br> 이쪽으로 와주세요: <a href="../demo/second.html">두 번째 질문</a>
+            </p>
+            <p>
+               아직 데이터 분석을 위한 목적, 문제를 안 가지고 계시다면!
+               <br> 이쪽으로 와주세요: <a href="../demo/objectHelper.html">주제 도우미</a>
+            </p>
+    </body>
+
+</html>
